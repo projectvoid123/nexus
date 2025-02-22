@@ -1,0 +1,188 @@
+.games-container {
+    padding-top: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.games-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+    background: rgba(44, 44, 44, 0.3);
+    padding: 1.5rem;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+}
+
+.title-section {
+    flex: 1;
+}
+
+.section-title {
+    font-size: 2rem;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+.pin-instruction {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.games-per-page {
+    display: none;
+}
+
+.search-bar {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+#searchInput {
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 25px;
+    background-color: var(--surface-color);
+    color: var(--text-color);
+    width: 300px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+#searchInput:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--primary-color);
+}
+
+.random-game-btn {
+    padding: 0.8rem 1.2rem;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 25px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.random-game-btn:hover {
+    background-color: var(--secondary-color);
+}
+
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.game-card {
+    background-color: var(--surface-color);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: var(--text-color);
+    position: relative;
+}
+
+.game-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.game-thumbnail {
+    width: 100%;
+    padding-top: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.game-thumbnail img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.game-info {
+    padding: 1rem;
+}
+
+.game-info h3 {
+    margin: 0;
+    font-size: 1rem;
+    text-align: center;
+    font-weight: 500;
+}
+
+.pin-indicator {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 5px;
+    border-radius: 50%;
+    font-size: 0.9rem;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 2rem;
+}
+
+.pagination button {
+    padding: 0.5rem 1rem;
+    background-color: var(--surface-color);
+    border: none;
+    border-radius: 5px;
+    color: var(--text-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 40px;
+}
+
+.pagination button.active {
+    background-color: var(--primary-color);
+    font-weight: 600;
+}
+
+.pagination button:hover:not(.active) {
+    background-color: var(--secondary-color);
+}
+
+.pagination button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+    .games-header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .search-bar {
+        flex-direction: column;
+    }
+
+    #searchInput {
+        width: 100%;
+    }
+
+    .games-container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+} 

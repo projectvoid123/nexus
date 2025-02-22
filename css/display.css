@@ -1,0 +1,73 @@
+.game-display {
+    padding-top: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.game-container {
+    background: rgba(44, 44, 44, 0.3);
+    border-radius: 15px;
+    padding: 2rem;
+    backdrop-filter: blur(5px);
+}
+
+.game-container h1 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+}
+
+.game-frame-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    margin-bottom: 1.5rem;
+}
+
+.game-frame-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: var(--surface-color);
+}
+
+.game-controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.control-btn {
+    padding: 0.8rem 1.5rem;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 25px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.control-btn:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .game-display {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .game-controls {
+        flex-direction: column;
+    }
+} 
